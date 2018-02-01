@@ -1,17 +1,21 @@
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
+  background: url("../img/BTI_Website_background-small.png");
+  background-repeat: no-repeat;
+  background-position: top 0px center;
+  background-size: 1200px 2000px; 
 }
 
 .page-wrapper {
-  width: 500px;
-  margin: 150px auto;
+  width: 600px;
+  margin: 150px auto 0px auto;
 }
 
 .logo{
   display: block;
-  width: 150px;
-  margin: auto;
+  width: 500px;
+  margin: 0px auto 50px auto;
 }
 
 .section{
@@ -20,8 +24,29 @@ body{
   margin: 100px auto;
 }
 
+.third{
+  margin-top: 120px;
+}
+
+.fourth{
+  margin-top: 160px;
+}
+
+.section p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
 .social{
   margin: 0px 10px 0px 10px;
+  width: 75px;
+  height: 75px;
 }
 .social-buttons {
   margin-top: 30px 
@@ -29,12 +54,27 @@ body{
 
 .email-input{
   display: block;
-  width: 250px;
-  margin: auto
+  color: #fdb714;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 80%;
+  margin: auto;
+  outline: none;
+  border: 2px solid #fdb714;
+  background: transparent;
+  font-size: 16pt;
+  text-align: center;
 }
 
-.email-button{
+.orange-button{
   margin-top: 20px;
+  width: 200px;
+  color: white;
+  background-color: #fdb714;
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 14pt; 
 }
 
 .grey-text{
@@ -42,8 +82,8 @@ body{
 }
 
 p {
-  color: orange;
-  font-size: 16pt
+  color: #fdb714;
+  font-size: 16pt;
 }
 
 h1 {
@@ -54,6 +94,37 @@ h2 {
   color: #595b60; 
 }
 
+ul.grey-text {
+  list-style-type: none;
+  list-style-position: outside; 
+  padding: 0px;
+  font-size: 16pt
+}
+
+.footer{
+  margin-top: 20px;
+}
+
+.line-break {
+  width: 70%;
+}
+
+/* fix defaults */
+input::-webkit-input-placeholder { 
+  color: #fdb714;
+}
+input::-moz-placeholder { 
+  color: #fdb714;
+}
+input:-ms-input-placeholder { 
+  color: #fdb714;
+}
+input:-moz-placeholder { 
+  color: #fdb714;
+}
+::-moz-placeholder {
+  opacity: 1;
+}
 
 
 

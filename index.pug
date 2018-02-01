@@ -6,15 +6,13 @@ html(lang="en")
     title Blockchain Training Institute
     meta(name="description" content="")
     link(rel="stylesheet" href="css/styles.css")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet") 
     script(type="text/javascript" src="js/script.js")
   body
     .page-wrapper
       .first.section
-        img.logo(src="http://via.placeholder.com/150x75")
-
-        hr.line-break
-        h2 BLOCKCHAIN TRAINING INSTITUTE 
-        p Welcome to the blockain training institute
+        img.logo(src="img/Logo.svg")
+        p Welcome to the blockchain training institute
         p Blockchain technology is one of the most profound technological developments since the internet, and althought it's seen massive growth in revent years, we're still in the early stages
       .second.section
         h1 BTI has one mission...
@@ -22,16 +20,19 @@ html(lang="en")
         p.grey-text Our aim is to remanin a voice of reason in an industry that will ultimately change how we comminicate, transact and interact, but it is currently clouded by misinformation, hype and get-rich quick schemes.
       .third.section
         .social-buttons
-          img.social(src="http://via.placeholder.com/75x75")
-          img.social(src="http://via.placeholder.com/75x75")
-          img.social(src="http://via.placeholder.com/75x75")
-        p.grey-text Click on our social mesia links to chat ans engage with BTI tutors, alimni, industry experts and interested individuals come together and discuss blockchain, current affairs and more.
+          a(href="https://www.facebook.com/blockchaintraininginstitute/")
+            img.social(src="img/facebook-white.svg")
+          a(href="https://medium.com/@AleksandarSvetski")  
+            img.social(src="img/medium-white.svg")
+          a(href="https://www.linkedin.com/company/blockchaintraining/")  
+            img.social(src="img/linkedin-white.svg")
+        p.grey-text Click on our social media links to chat ans engage with BTI tutors, alimni, industry experts and interested individuals come together and discuss blockchain, current affairs and more.
       .fourth.section
         h1 Join our mailing list
         .email-content
-          input.email-input(type="email" placeholder="ENTER YOUR EMAIL HERE")
-          button.email-button(type="button") Join
-        p like you, we hate spam, so our mailing list exists for 2 reasons:
+          input.email-input(type="email" placeholder="ENTER YOUR EMAIL HERE :)")
+          button.orange-button(type="button") JOIN
+        p Like you, we hate spam, so our mailing list exists for 2 reasons:
         p.grey-text To notify you when new workshop dates are announced
         p.grey-text We send out our monthly "State of the blockchain industry" which includes a recap od the months major events along with further reading.
       .fifth.section
@@ -40,16 +41,21 @@ html(lang="en")
         ul.grey-text
           li Non-technical
           li Technical
-          li Research and Valuation (Token Economics/Investment)
+          li Research and Valuation (Token Economics / Investment)
           li Corporate Workshops
         a(href="http://google.com")
-          button(type="button") FIND OUT MORE
+          button.orange-button(type="button") FIND OUT MORE
         .logo
-        hr.line-break
-        .email-content
-          input.email-input(type="email" placeholder="ENTER YOUR EMAIL HERE")
-          button.email-button(type="button") Join
-        .social-buttons
-          img.social(src="http://via.placeholder.com/75x75")
-          img.social(src="http://via.placeholder.com/75x75")
-          img.social(src="http://via.placeholder.com/75x75")
+    hr.line-break
+    .page-wrapper.footer
+      .email-content
+        input.email-input(type="email" placeholder="ENTER YOUR EMAIL HERE")
+        button.orange-button(type="button") Join
+      .social-buttons
+          a(href="https://www.facebook.com/blockchaintraininginstitute/")
+            img.social(src="img/facebook.svg")
+          a(href="https://medium.com/@AleksandarSvetski")  
+            img.social(src="img/medium.svg")
+          a(href="https://www.linkedin.com/company/blockchaintraining/")  
+            img.social(src="img/linkedin.svg")
+    .bottom-page
