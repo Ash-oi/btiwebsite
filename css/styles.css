@@ -1,10 +1,10 @@
 body{
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-  background: url("../img/BTI_Website_background.png");
+  background: url("../img/BTI_Website_background-small.png");
   background-repeat: no-repeat;
   background-position: top 0px center;
-  background-size: 1200px 2000px; 
+  background-size: 1800px 3000px; 
 }
 
 .page-wrapper {
@@ -21,7 +21,7 @@ body{
 .section{
   width: 100%;
   display: block;
-  margin: 100px auto;
+  margin: 320px auto;
 }
 
 .third{
@@ -163,6 +163,9 @@ input:-moz-placeholder {
 @media only screen and (max-width: 500px) {
   body{
     background-size: 600px 1000px; 
+  }
+  .section{
+    margin: 150px auto;
   }
   .page-wrapper {
     width: 90%;
