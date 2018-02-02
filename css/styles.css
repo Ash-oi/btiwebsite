@@ -1,7 +1,7 @@
 body{
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-  background: url("../img/BTI_Website_background-small.png");
+  background: url("../img/BTI_Website_background.png");
   background-repeat: no-repeat;
   background-position: top 0px center;
   background-size: 1200px 2000px; 
@@ -47,7 +47,9 @@ a {
   margin: 0px 10px 0px 10px;
   width: 75px;
   height: 75px;
+  display: inline-block;
 }
+
 .social-buttons {
   margin-top: 30px 
 }
@@ -75,6 +77,21 @@ a {
   border: none;
   padding: 5px;
   font-size: 14pt; 
+  box-sizing:border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.orange-button:hover{
+  background-color:transparent;
+  color: #fdb714;
+}
+
+.orange-button:active {
+  color: #a87a0e;
 }
 
 .grey-text{
@@ -109,6 +126,22 @@ ul.grey-text {
   width: 70%;
 }
 
+
+.facebook{
+  background: url("../img/facebook-white.svg");
+  background-repeat: no-repeat;
+}
+
+.medium {
+  background: url("../img/medium-white.svg");
+  background-repeat: no-repeat;
+}
+
+.linkedin {
+  background: url("../img/linkedin-white.svg");
+  background-repeat: no-repeat;
+}
+
 /* fix defaults */
 input::-webkit-input-placeholder { 
   color: #fdb714;
@@ -126,5 +159,51 @@ input:-moz-placeholder {
   opacity: 1;
 }
 
+/* mobile responsive */
+@media only screen and (max-width: 500px) {
+  body{
+    background-size: 600px 1000px; 
+  }
+  .page-wrapper {
+    width: 90%;
+    margin: 20px auto 0px auto;
+  }
+  .first{
+    margin-top: 50px;
+  }
+  .logo{
+    width: 90%;
+  }
+  .facebook{
+    background: url("../img/facebook.svg");
+  }
+  .medium {
+    background: url("../img/medium.svg");
+  }  
+  .linkedin {
+    background: url("../img/linkedin.svg");
+  }
+  .email-input{
+    font-size: 12pt; 
+  }
+  .second{
+    margin-top: 230px;
+  }
+}
 
+/* loader */
+.loader {
+  border: 6px solid #595b60; /* Light grey */
+  border-top: 6px solid #fdb714; /* Blue */
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  animation: spin 1s linear infinite;
+  margin: 19px auto 0px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 

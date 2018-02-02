@@ -7,7 +7,7 @@ html(lang="en")
     meta(name="description" content="")
     link(rel="stylesheet" href="css/styles.css")
     link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet") 
-    script(type="text/javascript" src="js/script.js")
+    script(type="text/javascript" src="js/scripts.js")
   body
     .page-wrapper
       .first.section
@@ -21,17 +21,19 @@ html(lang="en")
       .third.section
         .social-buttons
           a(href="https://www.facebook.com/blockchaintraininginstitute/")
-            img.social(src="img/facebook-white.svg")
+            .facebook.social
           a(href="https://medium.com/@AleksandarSvetski")  
-            img.social(src="img/medium-white.svg")
+            .medium.social
           a(href="https://www.linkedin.com/company/blockchaintraining/")  
-            img.social(src="img/linkedin-white.svg")
+            .linkedin.social
         p.grey-text Click on our social media links to chat ans engage with BTI tutors, alimni, industry experts and interested individuals come together and discuss blockchain, current affairs and more.
       .fourth.section
         h1 Join our mailing list
         .email-content
-          input.email-input(type="email" placeholder="ENTER YOUR EMAIL HERE :)")
-          button.orange-button(type="button") JOIN
+          input.email-input(id="topEmail" type="email" placeholder="ENTER YOUR EMAIL HERE :)")
+          button.orange-button(onClick="submitEmail(this, document.getElementById('loader1'), document.getElementById('topEmail'), document.getElementById('confirmed1'))"  type="button") JOIN
+          #loader1.loader(style="display:none")
+          #confirmed1.grey-text(style="display:none") Email Sent!
         p Like you, we hate spam, so our mailing list exists for 2 reasons:
         p.grey-text To notify you when new workshop dates are announced
         p.grey-text We send out our monthly "State of the blockchain industry" which includes a recap od the months major events along with further reading.
@@ -43,14 +45,16 @@ html(lang="en")
           li Technical
           li Research and Valuation (Token Economics / Investment)
           li Corporate Workshops
-        a(href="http://google.com")
+        a(href="https://www.facebook.com/blockchaintraininginstitute/")
           button.orange-button(type="button") FIND OUT MORE
         .logo
     hr.line-break
     .page-wrapper.footer
       .email-content
-        input.email-input(type="email" placeholder="ENTER YOUR EMAIL HERE")
-        button.orange-button(type="button") Join
+        input.email-input(id="bottomEmail" type="email" placeholder="ENTER YOUR EMAIL HERE")
+        button.orange-button(onClick="submitEmail(this, document.getElementById('loader2'), document.getElementById('bottomEmail'), document.getElementById('confirmed2'))" type="button") Join
+        #loader2.loader(style="display:none")
+        #confirmed2(style="display:none") Email Sent!
       .social-buttons
           a(href="https://www.facebook.com/blockchaintraininginstitute/")
             img.social(src="img/facebook.svg")
