@@ -1,0 +1,31 @@
+.centre-container {
+  width:800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.right-container{
+  width:500px;
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.left-container {
+  width:500px;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.thinner {
+  width: 500px;
+}
+

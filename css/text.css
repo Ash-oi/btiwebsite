@@ -1,0 +1,57 @@
+@font-face {
+  font-family: base-font;
+  src: url('myanmar-sangam.ttf');
+}
+body {
+  font-family: base-font;
+}
+
+.giant-text {
+  font-size: 258pt;
+  text-transform: uppercase;
+  padding: 5px;
+  margin: 5px; 
+  line-height: 150pt;
+  color: rgba(151, 151, 151, 0.7);
+}
+
+.heading{
+  font-size: 30pt;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 20px;
+} 
+
+.main-heading{
+  font-size: 45pt;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 20px;
+}
+
+.content {
+  color: white;
+  font-size: 20pt;
+  line-height: 26pt;
+} 
+
+.grey-text{
+  color:rgb(86, 87, 89);
+}
+
+.bold {
+  /* text-transform: uppercase; */
+  font-weight: 700;
+}
+
+.centre-text{
+  text-align: center;
+}
+
+.block{
+  display: block;
+}
+
+ul {
+  list-style-position: inside;
+}

@@ -34,7 +34,7 @@ html(lang="en")
           input.email-input(id="topEmail" type="email" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="ENTER YOUR EMAIL HERE :)")
           button.orange-button(onClick="submitEmail(this, document.getElementById('loader1'), document.getElementById('topEmail'), document.getElementById('confirmed1'))"  type="button") JOIN
           #loader1.loader(style="display:none")
-          #confirmed1.grey-text(style="display:none") Email Sent!
+          #confirmed1.confirmed.grey-text(style="display:none") Email Sent!
         p Like you, we hate spam, so our mailing list exists for 2 reasons:
         p.grey-text To notify you when new workshop dates are announced
         p.grey-text We send out our monthly "State of the blockchain industry" which includes a recap of the months major events along with further reading.
@@ -55,7 +55,7 @@ html(lang="en")
         input.email-input(id="bottomEmail" type="email" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="ENTER YOUR EMAIL HERE")
         button.orange-button(onClick="submitEmail(this, document.getElementById('loader2'), document.getElementById('bottomEmail'), document.getElementById('confirmed2'))" type="button") Join
         #loader2.loader(style="display:none")
-        #confirmed2(style="display:none") Email Sent!
+        #confirmed2.confirmed.grey-text(style="display:none") Email Sent!
       .social-buttons
           a(href="https://www.facebook.com/blockchaintraininginstitute/")
             img.social(src="img/facebook.svg")

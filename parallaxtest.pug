@@ -1,0 +1,140 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Blockchain Training Institute
+    meta(name="description" content="")
+    link(rel="shortcut icon" type="image/png" href="img/logos/favicon-160.png")
+    link(rel="stylesheet" href="css/parallax.css")
+    link(rel="stylesheet" href="css/logo.css")
+    link(rel="stylesheet" href="css/text.css")
+    link(rel="stylesheet" href="css/containers.css")
+    link(rel="stylesheet" href="css/navbar.css")
+    link(rel="stylesheet" href="css/styles.css")
+    
+    
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet") 
+    script(type="text/javascript" src="js/scripts.js")
+  body
+    .logo-wrapper
+      img.logo(src="img/logos/Logo.png")
+    .navbar
+      #first.selected.filled
+      #second.selected
+      #third.selected
+      #fourth.selected
+      #fifth.selected
+      #sixth.selected
+      a(target="_blank" href="https://www.facebook.com/blockchaintraininginstitute/")
+        .facebook.social
+      a(target="_blank" href="https://medium.com/@AleksandarSvetski")  
+        .medium.social
+      a(target="_blank" href="https://www.linkedin.com/company/blockchaintraining/") 
+        .linkedin.social
+    .parallax(onscroll="parallaxScrolled(this)")
+      #group1.parallax__group
+        .parallax__layer.background-options.parallax__layer--base
+          .centre-container.centre-text
+            .giant-text 2018
+            .main-heading The Revolution
+            p.content.bold 
+              span.block Blockchains & Decentralised Consensus Protocols are transforming
+              span.block the world the same way the internet did 20yrs ago.
+            p.content(style="margin-top:20px;") We’re here to help you prepare for it.
+      #group2.parallax__group
+        .parallax__layer.background-options.parallax__layer--back
+          .right-container
+            .heading Welcome
+            p.content Blockchain technology is one of the most profound technological developments since the internet, and although it's seen massive growth in recent years, we're still in the early stages.    
+      #group3.parallax__group
+        .parallax__layer.background-options.parallax__layer--base
+          .left-container
+            .heading Our Mission
+            p.content to educate the public on the fundamentals of blockchain technology, and to help people navigate and understand the applications built upon it, most notably smart contracts, governance models, cryptocurrencies and tokenised assets.
+            br
+            p.content Our aim is to remain a voice of reason in an industry that will ultimately change how we communicate, transact and interact, but is currently clouded by misinformation, hype and get-rich quick schemes.
+      #group4.parallax__group
+        .parallax__layer.background-options.parallax__layer--back
+          .right-container
+            .heading.grey-text Join the Community
+            p.content.grey-text To the left you’ll find our social media links, where you can connect & engage with BTI tutors, alumni, industry experts and interested indivuduals. It’s where we come together to discuss the blockchain, crypto, current affairs & more.
+      #group5.parallax__group
+        .parallax__layer.background-options.parallax__layer--base
+          .left-container
+            .heading our courses
+            p.content Our courses and workshops are spread into four primary categories:
+            ul
+              li.content Non-Technical
+              li.content Technical
+              li.content Research and Valuation (Token Economics / Investment)
+              li.content Corporate workshops
+            p.content Courses and workshops are run throughout year in Australia & NZ. Further information and workshop dates can be found here:
+            button.orange-button course dates            
+      #group6.parallax__group
+        .parallax__layer.background-options.parallax__layer--back
+          .centre-container.thinner
+            .heading mailing list
+            p.content Like you, we hate spam, so our mailing list exists for 2 only reasons:
+            ul
+              li.content To notify you when new workshop dates are announced 
+              li.content We send out our monthly “State of the blockchain industry” which includes a recap of the months major events along with further reading.
+            input.email-input(type="email" placeholder="EMAIL*")
+            button.orange-button join
+            p.content.bold.centre-text or
+            button.orange-button contact us
+  script.
+    const screenHeight = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+    const navBubbles = [
+      document.getElementById("first"),
+      document.getElementById("second"),
+      document.getElementById("third"),
+      document.getElementById("fourth"),
+      document.getElementById("fifth"),
+      document.getElementById("sixth"),
+    ];
+    
+    removeFill = (except) => {
+      for(let bubble in navBubbles){
+        if(bubble !== except){
+          navBubbles[bubble].classList.remove("filled");
+        }
+      }
+    }
+
+    parallaxScrolled = (element) => {
+      const currentScroll = element.scrollTop + screenHeight / 2;      
+      //- theres no way this is efficient
+
+      switch (true) {
+        case(currentScroll <= screenHeight):
+          removeFill(0)
+          navBubbles[0].classList.add("filled");
+          break;
+        case(currentScroll <= screenHeight * 2):
+          removeFill(1)
+          navBubbles[1].classList.add("filled");
+          break;
+        case(currentScroll <= screenHeight * 3):
+          removeFill(2)
+          navBubbles[2].classList.add("filled");
+          break;
+        case(currentScroll <= screenHeight * 4):
+          removeFill(3)
+          navBubbles[3].classList.add("filled");
+          break;
+        case(currentScroll <= screenHeight * 5):
+          removeFill(4)
+          navBubbles[4].classList.add("filled");
+          break;
+        case(currentScroll <= screenHeight * 6):
+          removeFill(5)
+          navBubbles[5].classList.add("filled");
+          break;
+      }
+    };
+      
+      

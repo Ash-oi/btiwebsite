@@ -1,0 +1,45 @@
+.navbar{
+  width:80px;
+  position: fixed;
+  left: 80px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.selected {
+  width: 40px;
+  height: 10px;
+  border: 1px solid #fdb714;
+  border-radius: 30px;
+  margin: 20px auto 0px auto;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.filled {
+  background-color: #fdb714;
+}
+
+.facebook {
+  background-image: url("../img/social/facebook.svg")
+}
+
+.medium{
+  background-image: url("../img/social/medium.svg")
+}
+
+.linkedin {
+  background-image: url("../img/social/linkedin.svg")
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 0px auto;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.logo-wrapper{
+  position: fixed;
+  top: 40;
+  left: 40;
+  z-index: 10;
+}
+
+.logo{
+  width: 500px;
+}
