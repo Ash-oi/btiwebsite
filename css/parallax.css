@@ -58,10 +58,6 @@ body, html {
   overflow: hidden;
 }
 
-body {
-  font: 100% / 1.5 Arial;
-}
-
 * {
   margin:0;
   padding:0;
@@ -86,57 +82,61 @@ body {
 /* make the groups slide over each other */
 
 #group1 {
-  z-index: 5;
+  z-index: 3;
 }
-#group1 .parallax__layer--base {
+#group1 .parallax__layer--back {
   background-image: url("../img/backgrounds/BTI_Website_Background.png");
 }
 
 #group2 {
-  z-index: 3;
+  z-index: 5;
 }
-#group2 .parallax__layer--back {
+#group2 .parallax__layer--base {
   background-image: url("../img/backgrounds/BTI_Website_Background2.png");  
 }
 
 #group3 {
-  z-index: 4;
+  z-index: 3;
 }
-#group3 .parallax__layer--base {
+#group3 .parallax__layer--back {
   background-image: url("../img/backgrounds/BTI_Website_Background3.png");
 }
 
 #group4 {
-  z-index: 2;
+  z-index: 5;
 }
-#group4 .parallax__layer--back {
+#group4 .parallax__layer--base {
   background-image: url("../img/backgrounds/BTI_Website_Background4.png");
 }
 
 #group5 {
   z-index: 3;
 }
-#group5 .parallax__layer--base {
+#group5 .parallax__layer--back {
   background-image: url("../img/backgrounds/BTI_Website_Background5.png");
 }
 
 #group6 {
-  z-index: 2;
+  z-index: 5;
 }
-#group6 .parallax__layer--back {
+#group6 .parallax__layer--base {
   background-image: url("../img/backgrounds/BTI_Website_Background6.png");
 }
+
+/* #group7 {
+  z-index: 3;
+}
+.final{
+  background: black;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+} */
+
 
 .background-options{
   background-repeat: no-repeat;
   background-position: top 0px center; 
   background-size: auto 120vh;
-}
-
-/* Mobile responsiveness */
-
-@media only screen and (max-width: 1200px) {
-  .background-options{
-    background-position: left -200px center; 
-  }
 }

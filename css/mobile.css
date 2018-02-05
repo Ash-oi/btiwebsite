@@ -1,0 +1,117 @@
+
+
+
+/* desktop gate width */
+@media only screen and (max-width: 1200px) {
+  .background-options{
+    background-position: left -200px center; 
+  }
+
+  #group2 .right-container{
+    background-color: rgba(0,0,0,0.7);
+    padding: 12px;
+    left: 50%;
+    top: 50%;
+  }
+
+  #group4 .right-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 12px;    
+    left: 50%;
+    top: 50%;
+  }
+
+  .left-container{
+    left: 50%;
+    top: 50%;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .hide-on-mobile{
+    display: none;
+  }
+
+  .mobile-social-menu{
+    display: block !important;
+    margin: auto; 
+  }
+
+  .social{
+    display: inline-block;
+    margin: 20px 10px 0px 10px;
+  }
+}
+
+/* most tablets */
+@media only screen and (max-width: 768px) {
+  #group1 .centre-container {
+    width: 500px
+  }
+
+  #group1 .main-heading{
+    font-size: 35pt;
+  }
+
+  #group1 .content{
+    font-size: 12pt;
+  }
+
+  .giant-text {
+    font-size:145pt;
+    line-height: 85pt;
+  }
+}
+
+/* most mobiles */
+@media only screen and (max-width: 530px) {
+
+  /* ALL PAGES */
+  .centre-container, .left-container, .right-container{
+    width:90% !important;
+  }
+
+  .background-options{
+    background-position: left -200px center; 
+  }
+
+  .content{
+    font-size: 12pt !important;
+    line-height: 16pt !important;
+  }  
+
+  .main-heading{
+    font-size: 15pt !important;
+    letter-spacing: 8px !important;
+  }
+
+  .heading {
+    font-size: 20pt !important;
+    letter-spacing: 10pt !important;
+  }
+
+  /* PAGE 1 */
+  .logo-wrapper{
+    width:90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .giant-text {
+    font-size:90pt !important;
+    line-height: 60pt !important;
+  }
+
+  .email-input{
+    font-size: 12pt;
+  }
+
+  .orange-button {
+    font-size:12pt;
+  }
+
+  
+}
+

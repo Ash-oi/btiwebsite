@@ -2,9 +2,15 @@
   position: fixed;
   top: 40;
   left: 40;
+  width: 500px;
+  height:70px;
   z-index: 10;
 }
 
-.logo{
-  width: 500px;
+.light-logo{
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/logos/Logo.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
