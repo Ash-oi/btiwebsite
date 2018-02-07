@@ -1,4 +1,4 @@
-const ENDPOINT_URL = "http://localhost:3000/v1/users"
+const ENDPOINT_URL = "https://steamed-hams.stashh.io/v1/users"
 
 submitEmail = (button, input, loader, confirmed) => {
   button.style.display = 'none';
