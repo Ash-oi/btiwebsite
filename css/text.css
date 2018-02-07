@@ -53,5 +53,6 @@ body {
 }
 
 ul {
-  list-style-position: inside;
+  margin: 10px 0px 10px 22px;
+  list-style-position: outside;
 }

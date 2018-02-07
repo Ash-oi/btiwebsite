@@ -25,6 +25,10 @@
   transform: translate(-50%, -50%);
 }
 
+#group5 .left-container{
+  width: 600px;
+}
+
 .thinner {
   width: 500px;
 }

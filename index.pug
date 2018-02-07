@@ -14,9 +14,8 @@ html(lang="en")
     link(rel="stylesheet" href="css/styles.css")
     link(rel="stylesheet" href="css/mobile.css")
     link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet") 
-    script(type="text/javascript" src="js/scripts.js")
   body
-    .logo-wrapper
+    #logo-wrapper
       #logo.light-logo
     .navbar
       #first.selected.filled(onClick="scrollBubble(this)")
@@ -38,8 +37,8 @@ html(lang="en")
             .giant-text 2018
             .main-heading The Revolution
             p.content.bold 
-              span.block Blockchains & Decentralised Consensus Protocols are transforming
-              span.block the world the same way the internet did 20yrs ago.
+              span.block Blockchains & Decentralised Consensus Protocols are
+              span.block transforming the world the same way the internet did 20yrs ago.
             p.content(style="margin-top:20px;") We’re here to help you prepare for it.
       #group2.parallax__group
         .parallax__layer.background-options.parallax__layer--base
@@ -58,7 +57,7 @@ html(lang="en")
           .right-container 
             .heading.grey-text Join the Community
             p.content.grey-text 
-              span.hide-on-mobile To the left you’ll find our social media links, where
+              span.hide-on-mobile To the left you’ll find our social media links, where&nbsp;
               | you can connect & engage with BTI tutors, alumni, industry experts and interested indivuduals. It’s where we come together to discuss the blockchain, crypto, current affairs & more.
             .mobile-social-menu
               a(target="_blank" href="https://www.facebook.com/blockchaintraininginstitute/")
@@ -78,7 +77,8 @@ html(lang="en")
               li.content Research and Valuation (Token Economics / Investment)
               li.content Corporate workshops
             p.content Courses and workshops are run throughout year in Australia & NZ. Further information and workshop dates can be found here:
-            button.orange-button course dates            
+            a(target="_blank" href="https://www.eventbrite.com.au/o/the-blockchain-training-institute-16450429539#live_events")
+              button.orange-button course dates            
       #group6.parallax__group
         .parallax__layer.background-options.parallax__layer--base
           .centre-container.thinner
@@ -87,97 +87,14 @@ html(lang="en")
             ul
               li.content To notify you when new workshop dates are announced 
               li.content We send out our monthly “State of the blockchain industry” which includes a recap of the months major events along with further reading.
-            input.email-input(type="email" placeholder="EMAIL*")
-            button.orange-button join
+            input#emailInput.email-input(type="email" placeholder="EMAIL*" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false")
+            button(onClick="submitEmail(this, document.getElementById('emailInput'), document.getElementById('loader'), document.getElementById('confirmed'))").orange-button join
+            #loader.loader(style="display:none")
+            #confirmed.content(style="display:none") Email Saved!
             p.content.bold.centre-text(style="margin-top: 20px") or
-            button.orange-button contact us
-        
-  script.
-
-    const deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
-    const navBubbles = [
-      document.getElementById("first"),
-      document.getElementById("second"),
-      document.getElementById("third"),
-      document.getElementById("fourth"),
-      document.getElementById("fifth"),
-      document.getElementById("sixth"),
-    ];
-    
-    removeFill = (except) => {
-      for(let bubble in navBubbles){
-        if(bubble !== except){
-          navBubbles[bubble].classList.remove("filled");
-        }
-      }
-    }
-
-    parallaxScrolled = (element) => {
-      const scrollHeight = element.scrollHeight / 6  
-      const currentScroll = element.scrollTop + scrollHeight / 2; 
-
-      
-      //- theres no way this is efficient
-
-      switch (true) {
-        case(currentScroll <= scrollHeight):
-          removeFill(0)
-          navBubbles[0].classList.add("filled");
-          (deviceWidth < 1200) ? document.getElementById("logo").style.display = "block" : null;
-          break;
-        case(currentScroll <= scrollHeight * 2):
-          removeFill(1)
-          navBubbles[1].classList.add("filled");
-          (deviceWidth < 1200) ? document.getElementById("logo").style.display = "none" : null;
-          break;
-        case(currentScroll <= scrollHeight * 3):
-          removeFill(2)
-          navBubbles[2].classList.add("filled");
-          (deviceWidth < 1200) ? document.getElementById("logo").style.display = "none" : null;
-          break;
-        case(currentScroll <= scrollHeight * 4):
-          removeFill(3)
-          navBubbles[3].classList.add("filled");  
-          (deviceWidth < 1200) ? document.getElementById("logo").style.display = "none" : null;
-          break;
-        case(currentScroll <= scrollHeight * 5):
-          removeFill(4)
-          navBubbles[4].classList.add("filled");
-          (deviceWidth < 1200) ? document.getElementById("logo").style.display = "none" : null;
-          break;
-        case(currentScroll <= scrollHeight * 6):
-          removeFill(5)
-          navBubbles[5].classList.add("filled");
-          (deviceWidth < 1200) ? document.getElementById("logo").style.display = "none" : null;
-          break;
-      }
-    };
-
-    scrollBubble = (element) => {
-      const pages = document.getElementsByClassName("parallax__group")
-      
-      switch(element.id){
-        case "first":
-          pages[0].scrollIntoView({block: "start", behavior: 'smooth'})
-          break;
-        case "second":
-          pages[1].scrollIntoView({block: "start", behavior: 'smooth'})
-          break;
-        case "third":
-          pages[2].scrollIntoView({block: "start", behavior: 'smooth'})
-          break;
-        case "fourth":
-          pages[3].scrollIntoView({block: "start", behavior: 'smooth'})
-          break;
-        case "fifth":
-          pages[4].scrollIntoView({block: "start", behavior: 'smooth'})
-          break;
-        case "sixth":
-          pages[5].scrollIntoView({block: "start", behavior: 'smooth'})
-          break;
-      }
-
-    }
+            a(href="mailto:info@blockchaintraininginstitute.com.au" target="_top")
+              button.orange-button contact us
+  script(type="text/javascript" src="js/scripts.js")
+  
       
       

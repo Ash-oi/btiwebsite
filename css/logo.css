@@ -1,10 +1,14 @@
-.logo-wrapper{
+#logo-wrapper{
   position: fixed;
   top: 40;
   left: 40;
   width: 500px;
   height:70px;
   z-index: 10;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .light-logo{
@@ -13,4 +17,8 @@
   background-image: url("../img/logos/Logo.png");
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.hide-logo{
+  top: -100px !important;
 }

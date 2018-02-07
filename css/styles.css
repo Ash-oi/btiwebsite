@@ -78,6 +78,13 @@ input:-moz-placeholder {
   margin: 19px auto 0px auto;
 }
 
+ 
+#confirmed{
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

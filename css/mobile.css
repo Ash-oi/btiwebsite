@@ -63,6 +63,11 @@
     font-size:145pt;
     line-height: 85pt;
   }
+
+  #group5 .left-container{
+    width: 500px;
+  }
+
 }
 
 /* most mobiles */
@@ -93,7 +98,7 @@
   }
 
   /* PAGE 1 */
-  .logo-wrapper{
+  #logo-wrapper{
     width:90%;
     left: 50%;
     transform: translateX(-50%);
@@ -110,6 +115,10 @@
 
   .orange-button {
     font-size:12pt;
+  }
+
+  .block{
+    display: inline !important;
   }
 
   
