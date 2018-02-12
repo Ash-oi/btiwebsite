@@ -87,11 +87,11 @@ html(lang="en")
             ul
               li.content To notify you when new workshop dates are announced 
               li.content We send out our monthly “State of the blockchain industry” which includes a recap of the months major events along with further reading.
-            input#emailInput.email-input(type="email" placeholder="EMAIL*" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false")
+            input#emailInput.email-input(onBlur="keyboardScrollFix(this)" type="email" placeholder="EMAIL*" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false")
             button(onClick="submitEmail(this, document.getElementById('emailInput'), document.getElementById('loader'), document.getElementById('confirmed'))").orange-button join
             #loader.loader(style="display:none")
             #confirmed.content(style="display:none") Email Saved!
-            p.content.bold.centre-text(style="margin-top: 20px") or
+            p#or.content.bold.centre-text or
             a(href="mailto:info@blockchaintraininginstitute.com.au" target="_top")
               button.orange-button contact us
   script(type="text/javascript" src="js/scripts.js")

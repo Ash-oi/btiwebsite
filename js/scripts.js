@@ -4,9 +4,6 @@ submitEmail = (button, input, loader, confirmed) => {
   button.style.display = 'none';
   loader.style.display = 'block';
 
-  const pages = document.getElementsByClassName("parallax__group")
-  pages[5].scrollIntoView();
-
   fetch(ENDPOINT_URL, {
     method: 'POST',
     headers: new Headers({
@@ -112,4 +109,10 @@ scrollBubble = (element) => {
       break;
   }
 
+}
+
+const keyboardScrollFix = (element) => {
+  setTimeout(function () {
+    element.scrollIntoView();
+  }, 300);
 }
