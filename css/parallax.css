@@ -16,6 +16,7 @@
   height: 100vh;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  /* transform: translate3d(700px, 0, -800px) rotateY(30deg); */
 }
 
 .parallax__layer {
@@ -111,9 +112,13 @@ body, html {
 
 #group5 {
   z-index: 3;
+  pointer-events: none;
+  
 }
 #group5 .parallax__layer--back {
   background-image: url("../img/backgrounds/BTI_Website_Background5.png");
+  pointer-events: auto;
+  
 }
 
 #group6 {
