@@ -102,6 +102,10 @@
     .orange-button {
       font-size:12pt;
     }
+
+    .light-logo {
+      width: 60%;
+    }
 }
 
 @media only screen and (max-height: 410px) {
@@ -167,4 +171,59 @@
   }
 
   
+}
+
+
+@media only screen and (max-height: 340px) {
+
+  body, html {
+    overflow: auto;
+  }
+
+  .parallax {
+    -webkit-perspective: none;
+    perspective: none;
+    display: block;
+  }
+  
+  .parallax__layer {
+   display: block;
+  }
+
+  .parallax__group {
+    display: block;
+    height: 500px;
+    min-height: 100%;
+    -webkit-transform-style: none;
+    transform-style: none;
+  }
+
+  .parallax__layer--fore {
+    display: block;    
+    -webkit-transform: none;
+    transform: none;
+    z-index: 0;
+  }
+  
+  .parallax__layer--base {
+    display: block;
+    -webkit-transform: none;
+    transform: none;
+    z-index: 0;
+  }
+  
+  .parallax__layer--back {
+    display: block;    
+    -webkit-transform: none;
+    transform: none;
+    z-index: 0;
+  }
+  
+  .parallax__layer--deep {
+    display: block;    
+    -webkit-transform: none;
+    transform: none;
+    z-index: 0;
+  }
+
 }
