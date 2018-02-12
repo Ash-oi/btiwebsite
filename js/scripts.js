@@ -4,27 +4,28 @@ submitEmail = (button, input, loader, confirmed) => {
   button.style.display = 'none';
   loader.style.display = 'block';
 
-  setTimeout(function () {
-    fetch(ENDPOINT_URL, {
-      method: 'POST',
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      }),
-      mode: 'cors',
-      body: JSON.stringify({
-        email: input.value,
-        context: '202f20de-b97a-4b49-91d0-970a8d5c60ce'
-      })
+  const pages = document.getElementsByClassName("parallax__group")
+  pages[5].scrollIntoView();
+
+  fetch(ENDPOINT_URL, {
+    method: 'POST',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    mode: 'cors',
+    body: JSON.stringify({
+      email: input.value,
+      context: '202f20de-b97a-4b49-91d0-970a8d5c60ce'
     })
-      .then(res => {
-        loader.style.display = 'none'
-        confirmed.style.display = 'block'
-      })
-      .catch(error => {
-        loader.style.display = 'none'
-        button.style.display = 'inline-block'
-      })
-  }, 1000);
+  })
+    .then(res => {
+      loader.style.display = 'none'
+      confirmed.style.display = 'block'
+    })
+    .catch(error => {
+      loader.style.display = 'none'
+      button.style.display = 'inline-block'
+    })
 }
 
 const deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
